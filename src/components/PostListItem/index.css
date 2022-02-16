@@ -1,0 +1,87 @@
+.post-list-item {
+  width: 100%;
+  max-width: 800px;
+  padding: 10px 0px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  margin-bottom: 32px;
+}
+
+.post-name-div {
+  display: flex;
+  width: 100%;
+  padding-left: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  font-style: normal;
+  color: #262626;
+  margin-right: 4px;
+  font-weight: 500;
+}
+
+.post-profile-pic {
+  width: 28px;
+  height: 28px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.post-username,
+.likes-count {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.post-image {
+  width: 100%;
+  height: 614px;
+}
+@media screen and (max-width: 360px) {
+  .post-image {
+    height: 370px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .post-image {
+    height: 560px;
+  }
+}
+.post-content-div {
+  padding: 15px 10px 0px 20px;
+  width: 100%;
+}
+.reaction-button {
+  outline: none;
+  border: 0px;
+
+  padding: 0px;
+  background-color: #fafafa;
+  margin-right: 25px;
+}
+
+.react-image {
+  /* width: 100%; */
+  width: 23px;
+  height: 23px;
+}
+
+.post-caption {
+  font-family: Roboto;
+  font-style: normal;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.post-comments-container {
+  list-style-type: none;
+  padding-left: 0px;
+}

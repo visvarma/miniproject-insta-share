@@ -1,0 +1,159 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0px 10px;
+  background-color: #fafafa;
+  align-items: center;
+}
+
+.profile-content-div {
+  width: 100%;
+  max-width: 1040px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.profile-info-container {
+  margin-left: 64px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.profile-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 32px;
+  color: #262626;
+  margin-bottom: 0px;
+}
+
+.profile-stats-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.profile-stats {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.highlight {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.bio-container {
+  margin-top: -15px;
+}
+.bio-container-mobile {
+  display: none;
+}
+@media (max-width: 400px) {
+  .bio-container {
+    display: none;
+  }
+
+  .bio-container-mobile {
+    display: block;
+  }
+  .profile-img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .profile-title {
+    font-size: 16px;
+  }
+
+  .profile-story {
+    width: 46px;
+    height: 46px;
+    margin-right: 20px;
+  }
+}
+
+.bio-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262626;
+}
+
+.bio {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #262626;
+}
+
+.line {
+  width: 100%;
+  max-width: 1040px;
+  height: 0px;
+
+  border: 0.1px solid #c6c6c8;
+}
+
+.profile-post-container {
+  width: 100%;
+  max-width: 1040px;
+}
+
+.profile-post-logo-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.post-head {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #262626;
+  margin-left: 16px;
+}
+
+.profile-stories {
+  display: flex;
+  width: 100%;
+  max-width: 1040px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.profile-story {
+  width: 58px;
+  height: 58px;
+  margin-right: 30px;
+  border: 0.1px solid #c6c6c8;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.profile-story-image {
+  width: 100%;
+  border-radius: 50%;
+}
