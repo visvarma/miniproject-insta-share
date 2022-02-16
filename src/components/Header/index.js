@@ -7,7 +7,7 @@ import Cookies from 'js-cookie'
 import './index.css'
 
 const Header = props => {
-  const [menuToggle, setMenuToggle] = useState(false)
+  const [menuToggle, setMenuToggle] = useState(true)
   const [searchInput, setSearchInput] = useState('')
 
   const onClickLogout = () => {
