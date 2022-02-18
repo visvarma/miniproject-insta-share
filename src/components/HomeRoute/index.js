@@ -21,7 +21,6 @@ class HomeRoute extends Component {
     postApiStatus: apiStatusConstants.initial,
     homeStoriesList: [],
     storiesApiStatus: apiStatusConstants.initial,
-    searchCaptionInput: '',
   }
 
   componentDidMount() {
@@ -33,11 +32,10 @@ class HomeRoute extends Component {
     this.setState({
       postApiStatus: apiStatusConstants.inProgress,
     })
-    const {searchCaptionInput} = this.state
 
     const jwtToken = Cookies.get('jwt_token')
 
-    const apiUrl = `https://apis.ccbp.in/insta-share/posts?search=${searchCaptionInput}`
+    const apiUrl = `https://apis.ccbp.in/insta-share/posts`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -110,11 +108,10 @@ class HomeRoute extends Component {
   }
 
   renderPostView = () => {
-    const {homePostList, searchCaptionInput} = this.state
+    const {homePostList} = this.state
 
     return (
       <>
-        {searchCaptionInput !== '' && <h1>Search Results</h1>}
         <PostCard postData={homePostList} />
       </>
     )
@@ -252,10 +249,10 @@ class HomeRoute extends Component {
     }
     return (
       <>
-        <Header onSearchCaption={this.onSearchCaption} />
+        <Header />
         {this.displayStoriesView()}
         {this.displayPostView()}
-        <div>{this.renderNoSearchResultView()}</div>
+        {/* <div>{this.renderNoSearchResultView()}</div> */}
       </>
     )
   }

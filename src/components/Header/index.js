@@ -1,14 +1,17 @@
 import {Link, withRouter} from 'react-router-dom'
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import {FaSearch} from 'react-icons/fa'
 
 import Cookies from 'js-cookie'
+import SearchContext from '../../Context'
 
 import './index.css'
 
 const Header = props => {
   const [menuToggle, setMenuToggle] = useState(true)
-  const [searchInput, setSearchInput] = useState('')
+  const [search, setSearch] = useState('')
+
+  const value = useContext(SearchContext)
 
   const onClickLogout = () => {
     const {history} = props
@@ -24,12 +27,11 @@ const Header = props => {
   }
 
   const onChangeSearchInput = e => {
-    setSearchInput(e.target.value)
+    setSearch(e.target.value)
   }
 
   const onClickSearchInput = () => {
-    const {onSearchCaption} = props
-    onSearchCaption(searchInput)
+    value.changeSearchInput(search)
   }
 
   return (
@@ -72,21 +74,22 @@ const Header = props => {
           <ul className="nav-menu">
             <li className="nav-menu-item search-input-container ">
               <input
-                value={searchInput}
+                value={search}
                 type="search"
                 className="search-input"
                 placeholder="Search Caption"
                 onChange={onChangeSearchInput}
               />
-
-              <button
-                type="button"
-                className="search-icon-button"
-                onClick={onClickSearchInput}
-                testid="searchIcon"
-              >
-                <FaSearch className="search-icon" />
-              </button>
+              <Link to="/search">
+                <button
+                  type="button"
+                  className="search-icon-button"
+                  onClick={onClickSearchInput}
+                  testid="searchIcon"
+                >
+                  <FaSearch className="search-icon" />
+                </button>
+              </Link>
             </li>
             <Link to="/" className="nav-link">
               <li className="nav-menu-item">Home</li>
@@ -109,7 +112,7 @@ const Header = props => {
           <Link to="/" className="nav-link nav-menu-item">
             <li className="nav-menu-item-mobile">Home</li>
           </Link>
-          <Link to="/" className="nav-link nav-menu-item">
+          <Link to="/search" className="nav-link nav-menu-item">
             <li className="nav-menu-item-mobile">Search</li>
           </Link>
           <Link to="/my-profile" className="nav-link nav-menu-item">

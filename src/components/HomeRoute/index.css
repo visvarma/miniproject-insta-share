@@ -50,9 +50,32 @@
   color: #ffffff;
 }
 
-.zero-search-result {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.search-not-found-heading {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 48px;
+}
+
+.search-not-found-para {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+
+  text-align: center;
+
+  color: #989898;
+  margin-top: -20px;
+}
+
+@media (max-width: 500px) {
+  .search-not-found-heading {
+    font-size: 1rem;
+  }
+  .search-not-found-para {
+    font-size: 0.5rem;
+  }
 }
