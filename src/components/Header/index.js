@@ -37,28 +37,6 @@ const Header = props => {
   return (
     <nav className="nav-header">
       <div className="nav-content">
-        <div className="nav-bar-mobile-logo-container">
-          <div className="header-website-logo-container">
-            <Link to="/" className="nav-link">
-              <img
-                className="website-logo"
-                src="https://res.cloudinary.com/visvarma/image/upload/v1644510074/InstaShare%20%28Instagram-Clone%29/Login-lg-Logo_wjasnt.png"
-                alt="website logo"
-              />
-            </Link>
-            <h1 className="header-website-logo-heading">Insta Share</h1>
-          </div>
-
-          <button type="button" className="nav-mobile-btn">
-            <img
-              src="https://res.cloudinary.com/visvarma/image/upload/v1644583989/InstaShare%20%28Instagram-Clone%29/header-hamburger_blr5em.png"
-              alt="nav hamburger"
-              className="nav-bar-image"
-              onClick={onOpenMenu}
-            />
-          </button>
-        </div>
-
         <div className="nav-bar-large-container">
           <div className="header-website-logo-container">
             <Link to="/" className="nav-link">
@@ -71,7 +49,7 @@ const Header = props => {
             <h1 className="header-website-logo-heading">Insta Share</h1>
           </div>
 
-          <ul className="nav-menu">
+          <ul className="nav-menu nav-large-display">
             <li className="nav-menu-item search-input-container ">
               <input
                 value={search}
@@ -100,10 +78,18 @@ const Header = props => {
           </ul>
           <button
             type="button"
-            className="logout-desktop-btn"
+            className="logout-desktop-btn nav-large-display"
             onClick={onClickLogout}
           >
             Logout
+          </button>
+          <button type="button" className="nav-mobile-btn">
+            <img
+              src="https://res.cloudinary.com/visvarma/image/upload/v1644583989/InstaShare%20%28Instagram-Clone%29/header-hamburger_blr5em.png"
+              alt="nav hamburger"
+              className="nav-bar-image"
+              onClick={onOpenMenu}
+            />
           </button>
         </div>
       </div>

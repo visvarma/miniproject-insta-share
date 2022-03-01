@@ -92,11 +92,7 @@ class MyProfileRoute extends Component {
   renderMyProfileSuccessView = () => {
     const {myProfileData} = this.state
 
-    return (
-      <div className="my-profile-container">
-        <ProfileView profileData={myProfileData} userIdentification="my" />
-      </div>
-    )
+    return <ProfileView profileData={myProfileData} userIdentification="my" />
   }
 
   renderMyProfileView = () => {

@@ -103,9 +103,7 @@ class UsersProfileRoute extends Component {
     const {profileDetails} = this.state
 
     return (
-      <div className="my-profile-container">
-        <ProfileView profileData={profileDetails} userIdentification="user" />
-      </div>
+      <ProfileView profileData={profileDetails} userIdentification="user" />
     )
   }
 

@@ -103,10 +103,6 @@ class HomeRoute extends Component {
     }
   }
 
-  onSearchCaption = search => {
-    this.setState({searchCaptionInput: search}, this.getHomePostList)
-  }
-
   renderPostView = () => {
     const {homePostList} = this.state
 
@@ -172,23 +168,6 @@ class HomeRoute extends Component {
     </div>
   )
 
-  renderNoSearchResultView = () => {
-    const {homePostList, searchCaptionInput} = this.state
-    if (homePostList.length === 0 && searchCaptionInput !== '') {
-      return (
-        <div className="zero-search-result">
-          <img
-            src="https://res.cloudinary.com/visvarma/image/upload/v1645026042/InstaShare%20%28Instagram-Clone%29/GroupSearchNotFound_xgt8xz.png"
-            alt="search not found"
-          />
-          <h1>Search Not Found</h1>
-          <p>Try different keyword or search again</p>
-        </div>
-      )
-    }
-    return null
-  }
-
   renderLoadingView = () => (
     <div className="loader-container" testid="loader">
       <Loader
@@ -252,7 +231,6 @@ class HomeRoute extends Component {
         <Header />
         {this.displayStoriesView()}
         {this.displayPostView()}
-        {/* <div>{this.renderNoSearchResultView()}</div> */}
       </>
     )
   }
